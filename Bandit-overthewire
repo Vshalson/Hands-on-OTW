@@ -1,0 +1,247 @@
+Bandit
+
+level 0: u: Bandit0 ; p: Bandit0; cat readme
+
+level 1: u: bandit1 ; p: boJ9jbbUNNfktd78OOpsqOltutMc3MY1 ; cat ./-
+
+level 2: u: bandit2 ; p: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9 ; cat sp{tab}
+
+level 3: u: bandit3 ; p: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK ; cd inhere; cat .hidden
+
+level 4: u: bandit4 ; p: pIwrPrtPN36QITSp3EQaw936yaFoFgAB ; cd inhere ; cat ./-file07
+
+level 5: u: bandit5 ; p: koReBOKuIDDepwhWk7jZC0RTdopnAYKh ; 
+cd inhere ; cd maybehere07 ; 
+
+for f in ./.* ; do echo $f && cat "$f" ;  done
+
+OR 
+
+find . -size 1033c ! -executable
+
+level 6: u: bandit6 ; p: DXjZPULLxYr17uwoI01bNLQbtFemEgo7 ; 
+find / -user bandit76 -size 33c
+
+level 7: u: bandit7 ; p: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs ;
+grep "millionth" data.txt
+
+level 8: u: bandit8 ; p: cvX2JJa4CFALtqS87jk27qwqGhBM9plV ;
+cat data.txt | sort | uniq -u
+
+level 9: u: bandit9 ; p: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR ; 
+strings data.txt | grep "="
+
+level 10: u: bandit10 ; p: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk ;
+cat data.txt | base64 -d
+
+level 11: u: bandit11 ; p: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR ; 
+cat data.txt ; rot13.com and decode it 
+
+OR
+
+cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+
+level 12: u: bandit12 ; p: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu ; 
+here data.txt is a hexdump of file that repeatedly compressed
+to work on this we created directory in /tmp ;
+
+Note: without converting the file data to an appropriate file extension not run `gzip -d data`
+In tmp;
+1. since the file is hexdump we convert it back to binary
+xxd -r data.txt data
+
+2.file data      -> gzip compressed data ,"data2.bin"
+3.mv data data.gz      ->   we now know the extension of the file & converting it to file type;
+4.gzip -d data.gz
+5.file data           -> gzip compressed data "data2.bijn"
+6.mv data data.gz
+7.bzip2 -d data.bz2 
+8.file data          -> bzip2 compressed data
+9.mv data data.gz
+9.gzip2 -d data.gz
+10.file data                -> POSIX tar archive
+11.mv data data data.tar
+12.tar xvf data.tar
+13.file data5.bin           -> POSIX tar archive
+14.mv data45.bin data5.tar
+15.file data6.bin          -> bzip compressed
+16.mv data6.bin data6.tar
+17.tar xvf data6.tar
+18.file data8.bin           ->gzip compressed
+19.mv data8.bin data8.gz
+20.gzip -d data8.gz
+21.file data8              ->data8: ASCII file
+22.cat data8 
+
+level 13: u: bandit13 ; p: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL ; 
+ssh -i sshkey.private bandit14@localhost
+cd  /tmp/bandit_pass/bandit14
+cat bandit14
+
+level 14; u: bandit14 ; p: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e ;
+echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e | nc localhost 30000
+
+level 15: u: bandit15 ; p: BfMYroe26WYalil77FoDi9qh59eK5xNr ;  
+echo BfMYroe26WYalil77FoDi9qh59eK5xNr | openssl s_client -quiet -connect localhost:30001
+
+
+level 16: u: bandit16; p: `cluFn7wTiGryunymYOu4RcffSxQluehd ;
+$ nmap -p 31000-32000 localhost
+$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -quiet -connect localhost:31790
+$ exit shell
+$ vim private.key
+$ chmod 600 private.key
+$ ssh -i level17.key bandit17@bandit.labs.overthewire.org -p 2220
+$ done
+
+level 18: u: bandit18; p: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd ;
+here only spawn pseudo terminal
+$ ssh bandit18@bandit.labs.overthewire.org -p 2220 -t /bin/sh
+$ cat readme
+
+level 19: u: bandit19; p: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x ;
+$ ./bandit20-do id
+$ ./bandit20-do cat /etc/bandit_pass/bandit20
+
+level 20: u: bandit20; p: GbKksEFF4yrVs6il55v6gwY5aVje5f0j ;
+create two shells ; 
+1st shell: nc -lp 8282
+	type the password of this level 
+
+2nd shell: ./suconnect 8282
+
+level 21: u: bandit21; p: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr ; 
+$ cd /etc/cron.d/
+$ cat cron22
+$ cd /tmp/t*****
+$ cat /tmp/t***
+
+
+level 22: u: bandit22; p: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI ;
+$ cd /etc/cron.d/
+$ cat cronjob_bandit23
+here we can see there is bash file
+$ cat /usr/bin/cronjob_bandit23.sh 
+here they provided password entry for bandit22;
+$ mytarget = $(echo I am user bandit23 | md5sum | cut -d '' -f1)
+$ echo $mytarget
+$ cat /tmp/--output--
+
+level 23: u: bandit23; p: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n ;
+ $ cd /etc/cron.data
+ $ cat cronjob_bandit24
+ $ cat /usr/bin/cronjob_bandit24.sh
+ here you will find that one script which change to bandit24 directory and all scripts in it got executed once and deleted after every 60 seconds;
+ so we will write script in it and make it execute our password in /etc/bandit_pass/bandit24
+ $ mkdir /tmp/vizz
+ $ cd /tmp
+ $ chmod 777 vizz
+ $ cd vizz
+ $ vim pass.sh
+ #!/bin/bash
+ cat /etc/bandit_pass/bandit24 > /tmp/vizz/pass
+
+ $ chmod 777 pass.sh
+ $ cp pass.sh /var/spool/bandit24
+
+
+level 24: u: bandit24; p: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ ; 
+ $ mkdir /tmp/vizz
+ Make file to input password and four digit in nc
+ $ vim pass.sh
+ -------------------------
+ #!/bin/bash
+ 
+ pass = UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+ for i in {0000..9999}
+  do 
+  	echo $pass $i >> pass.txt
+  done
+ --------------------------
+ we'll get 
+ 	UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0000
+ 	UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ 0001
+ $ chmod 777 pass.sh
+ $ ./pass.sh
+ $ cat pass.txt | nc localhost 30002
+
+level 25: u: bandit25; p: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG ;
+In bandit25 shell connect to bandit 25 using and execute more command on it with smalling the terminal size as much as possible;
+ ->bandit25@bandit: $ ssh -i level26.sshkey bandit26@localhost -t more  
+ -> *enter*
+ you're opened in vim
+ -> :e /etc/bandit_pass/bandit26
+ but above password wont give you access using ssh
+ **Now in vim**
+ -> :set shell=/bin/bash
+ -> :shell
+ //tadaa you in the shell
+
+level 26: u: bandit26; p: 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+ here you wil get `bandit27-do` script and it will execute only one command as bandit27 user;
+ to make it print the pass of bandit27 we will create script in tmp and make it ex3cute by bandit27
+ $ echo "cat /etc/bandit_pass/bandit27" > /tmp/vizz/pass.sh
+ $ chmod +x /tmp/vizz/pass.sh
+ $ ./bandit27-do /tmp/vizz/pass.sh
+level 27: u: bandit27; p: 3ba3118a22e93127a4ed485be72ef5ea ;
+ here we asked to clone git repo to view password;
+ we cloned in /tmp/viz and inside it
+ $ git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+ $ cat README
+ you will get password
+
+level 28: u: bandit28; p: 0ef186ac70e04ea33b4c1853d2526fa2 ;
+here we clone git to /tmp/viz
+$ cd repo; cd .git
+$ git log
+here you'll find the commits introduced in the repo.
+analys
+$ git log -p -1
+-p will show the difference introduced in each commit
+//you'll get changed password
+level 29: u: bandit29; p: bbc96594b4e001778eee9975372716b2 ;
+here after cloning in /tmp/viz we see that `no password in production`
+so in .git we tried
+$ git log
+there's no password here which means there is github which wasn't in production and have version history
+$ git branch //and we find ourselves in master branch what are other branches?
+To show all the branches;
+$ git show-branch --all
+To find inside those branches we search them using
+$ git remote show origin // found three remote branches
+In repo path 
+$ git checkout dev
+Now we switched to dev branch
+$ cat README.md
+
+level 30: u: bandit30; p: 5b90576bedb2cc04c86a9e924ce42faf ;
+ there's nothing inside git log and git branches
+ from reference i found mention of tags
+ ``
+ Tags are ref's that point to specific points in Git history. Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1.0.1). A tag is like a branch that doesn't change. Unlike branches, tags, after being created, have no further history of commits.
+``
+There's secret inside .git/packed-refs i.e. tag=secret
+To read tags
+$ git show --name-only {tag-name}
+
+level 31: u: bandit31; p: 47e603bb428404d265f59c42920d81e5 ;
+here we have to push .txt with somecontents inside it;
+# .gitignore file ignores certain files from pushin in main directory; 
+$ rm .gitignore
+$ cat key.txt 
+May i come in?
+$ git add key.txt
+$ git commit 
+$ git push origin master
+tada you'll find password in the comments of process
+
+level 32: u: bandit32; p: 56a9bf19c63d650ce78e6ec0354ee45e ;
+here uppershell is an interactive shell to change to our bash shell use $0 
+>> $0
+$ whoami
+bandit33
+$ cat /etc/bandit_pass/bandit33
+
+level 33: u: bandit33; p: c9c3199ddf4121b10cf581a98d51caee ; 
+

@@ -1,0 +1,46 @@
+Its pure *nix fun
+How to connect?
+ssh leviathan{no}@leviathan.labs.overthewire.org -p 2223
+
+leviathan0:leviathan0
+$ls -lah
+$cd .backups
+$grep -r "leviathan" 
+
+leviathan1: rioGegei8m
+https://unix.stackexchange.com/questions/282215/how-to-view-a-binary-file
+$./check
+$strings check
+#it didnt show the word
+$hexdump -C check
+password:sex
+now in shell access 
+$cd /etc/leviathan_pass
+$cat leviathan2
+
+leviathan2: ougahZi8Ta
+
+
+leviathan3: Ahdiemoo1j
+$ ltrace ./level3
+here we find it compare it with snlprintf
+now enter input as snlprintf 
+again and snlprintf to escalte it to 4
+
+leviathan4: vuH0coox6m
+$ ls -lah
+$ cd .trash
+$ ./bin
+you'll find binary converted secret pass
+decode it and enjoy
+
+leviathan5: Tith4cokei
+here we find that it call for /tmp/file.log which is not in existance
+so we created it and linkedit with the password file of leviathan6
+
+leviathan6: UgaoFee4li
+
+I found the behaviour in tryhackme challenge
+$ for i in {0000....9999}; do ./leviathan6 $i ; done
+
+leviathan7: ahy7MaeBo9
